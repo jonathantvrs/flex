@@ -1,0 +1,83 @@
+html, 
+body, 
+#app {
+  height: 100%;
+  margin: 0;
+}
+
+#app {
+  display: flex;
+  /* 
+  Com o flex-wrap: wrap, é possível fazer com que o container flex 
+  "quebre a linha" baseado no tamanho dos elementos. O wrap-reverse
+  faz com que as propriedades se comportem de maneira oposta,
+  começando do fim para o ínicio. Se temos as caixas 1, 2 e 3, passamos
+  a ter 3, 2 e 1 a depender das outras propriedades
+  */
+  /* flex-wrap: wrap-reverse; */
+  /* 
+  Com o align content é possível alinhar os elementos quando acontece
+  uma quebra de linha, deixando os itens mais próximos. Possui também
+  as mesmas propriedades do justify-content  
+  */
+  align-content: center;
+  /* flex-direction: column; */
+  /* 
+  Com o flex-direction: row o align-items diz respeito  
+  ao alinhamento vertical e o justify-content ao 
+  alinhamento horizontal. Já com o flex-direction: column
+  obtemos o oposto.
+  */
+  /* align-items: flex-end; */
+  /* justify-content: center; */
+  /* 
+  O justify-content tem duas propriedades bem bacanas:  
+  space-around e space-between. A space-between trata-se
+  de um espaço colocado entre os itens, já a space-around é
+  a mesma coisa que a space-between, porém, com a adição
+  de espaçamento também no início e no final. São propriedades
+  apenas do justify-content.
+  */
+}
+
+.box {
+  width: 300px;
+  height: 60px;
+  margin: 5px;
+  /* 
+  A propriedade flex-grow especifica para os itens que eles 
+  aumentem para ocupar a largura total do container.
+  */
+  /* flex-grow: 1; */
+  /* 
+  A propriedade flex-shrink especifica se o itens vão ser 
+  expremidos ou não. 
+  flex-shrink: 1 ou flex-shrink: 0
+  */
+
+  /*
+  A propriedade flex indica as duas últimas citadas,
+  na ordem: flex-grow, flex-shrink. Geralmente a forma mais
+  utilizada é somente passando um valor: flex: 1. 
+  */
+  /* flex: 1; */
+
+}
+/*
+Com a propriedade order é possível dizer qual a ordem que os elementos
+vão ocupar no container flex, começando do 0.
+*/
+.red {
+  order: 1;
+  background: red;
+}
+
+.purple {
+  order: 2;
+  background: purple;
+}
+
+.yellow {
+  background: yellow;
+  order: 0;
+}
